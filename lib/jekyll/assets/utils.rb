@@ -173,9 +173,9 @@ module Jekyll
           end
         when obj.is_a?(Array)
           obj.map do |v|
-            parse_liquid(v, {
+            parse_liquid(v,
               ctx: ctx,
-            })
+            )
           end
         when obj.is_a?(String)
           k = Digest::SHA256.hexdigest(obj)[0, 6]
